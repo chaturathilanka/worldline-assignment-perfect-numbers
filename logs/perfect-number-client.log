@@ -1,0 +1,327 @@
+498  | [main] | INFO  | PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 51768 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+500  | [main] | INFO  | PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+558  | [main] | WARN  | o.s.b.c.ConfigurationWarningsApplicationContextInitializer |  | 
+
+** WARNING ** : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.
+
+ 
+967  | [main] | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext |  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:C:\Users\LENOVO\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.5\spring-boot-autoconfigure-2.7.5.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]; nested exception is java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake) 
+973  | [main] | INFO  | o.s.b.a.l.ConditionEvaluationReportLoggingListener |  | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+992  | [main] | ERROR | o.s.boot.SpringApplication |  | Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:C:\Users\LENOVO\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.7.5\spring-boot-autoconfigure-2.7.5.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]; nested exception is java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:457)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:316)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:276)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:295)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at PerfectNumbersApplication.main(PerfectNumbersApplication.java:8)
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:512)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:495)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:430)
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/r2dbc/spi/ValidationDepth
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3458)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2557)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.getSorted(JavaBeanBinder.java:140)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.addProperties(JavaBeanBinder.java:132)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.<init>(JavaBeanBinder.java:127)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder$Bean.get(JavaBeanBinder.java:226)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:54)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$5(Binder.java:476)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:590)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withDataObject(Binder.java:576)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$300(Binder.java:537)
+	at org.springframework.boot.context.properties.bind.Binder.bindDataObject(Binder.java:474)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:414)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:343)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:332)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:262)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:223)
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:138)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.r2dbc.spi.ValidationDepth
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 46 common frames omitted
+552  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 43976 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+554  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1274 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1284 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1285 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1353 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1354 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 753 ms 
+1393 | [main] | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext |  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'numberController': Unsatisfied dependency expressed through field 'numberService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.worldline.assignment.service.NumberService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+1396 | [main] | INFO  | o.a.catalina.core.StandardService |  | Stopping service [Tomcat] 
+1407 | [main] | INFO  | o.s.b.a.l.ConditionEvaluationReportLoggingListener |  | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+1421 | [main] | ERROR | o.s.b.d.LoggingFailureAnalysisReporter |  | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field numberService in com.worldline.assignment.controller.NumberController required a bean of type 'com.worldline.assignment.service.NumberService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.worldline.assignment.service.NumberService' in your configuration.
+ 
+547  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 52900 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+549  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1261 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1271 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1271 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1343 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1343 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 750 ms 
+1381 | [main] | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext |  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'numberController': Unsatisfied dependency expressed through field 'numberService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.worldline.assignment.service.NumberService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+1383 | [main] | INFO  | o.a.catalina.core.StandardService |  | Stopping service [Tomcat] 
+1392 | [main] | INFO  | o.s.b.a.l.ConditionEvaluationReportLoggingListener |  | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+1405 | [main] | ERROR | o.s.b.d.LoggingFailureAnalysisReporter |  | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field numberService in com.worldline.assignment.controller.NumberController required a bean of type 'com.worldline.assignment.service.NumberService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.worldline.assignment.service.NumberService' in your configuration.
+ 
+488  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 49452 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+490  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1216 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1226 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1226 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1299 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1299 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 766 ms 
+1339 | [main] | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext |  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'numberController' defined in file [E:\Java Projects\assignment\assignment\target\classes\com\wolrdline\assignment\controller\NumberController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.worldline.assignment.service.NumberService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+1342 | [main] | INFO  | o.a.catalina.core.StandardService |  | Stopping service [Tomcat] 
+1352 | [main] | INFO  | o.s.b.a.l.ConditionEvaluationReportLoggingListener |  | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+1368 | [main] | ERROR | o.s.b.d.LoggingFailureAnalysisReporter |  | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.worldline.assignment.controller.NumberController required a bean of type 'com.worldline.assignment.service.NumberService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.worldline.assignment.service.NumberService' in your configuration.
+ 
+510  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 47520 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+512  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1225 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1235 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1235 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1305 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1305 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 749 ms 
+1344 | [main] | WARN  | o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext |  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'numberController' defined in file [E:\Java Projects\assignment\assignment\target\classes\com\wolrdline\assignment\controller\NumberController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.worldline.assignment.service.NumberService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+1348 | [main] | INFO  | o.a.catalina.core.StandardService |  | Stopping service [Tomcat] 
+1357 | [main] | INFO  | o.s.b.a.l.ConditionEvaluationReportLoggingListener |  | 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+1374 | [main] | ERROR | o.s.b.d.LoggingFailureAnalysisReporter |  | 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.worldline.assignment.controller.NumberController required a bean of type 'com.worldline.assignment.service.NumberService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.worldline.assignment.service.NumberService' in your configuration.
+ 
+504  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 41076 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+506  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1227 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1235 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1235 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1307 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1307 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 756 ms 
+1589 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1597 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.435 seconds (JVM running for 1.737) 
+63161 | [http-nio-8080-exec-1] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring DispatcherServlet 'dispatcherServlet' 
+63161 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Initializing Servlet 'dispatcherServlet' 
+63162 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Completed initialization in 1 ms 
+90845 | [http-nio-8080-exec-4] | WARN  | o.s.w.s.m.s.DefaultHandlerExceptionResolver |  | Resolved [org.springframework.web.bind.ServletRequestBindingException: Missing request attribute 'CorrelationId' of type String] 
+579  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 4916 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+581  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1422 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1433 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1433 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1511 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1511 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 886 ms 
+1857 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1868 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.669 seconds (JVM running for 2.647) 
+8375 | [http-nio-8080-exec-2] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring DispatcherServlet 'dispatcherServlet' 
+8375 | [http-nio-8080-exec-2] | INFO  | o.s.web.servlet.DispatcherServlet |  | Initializing Servlet 'dispatcherServlet' 
+8375 | [http-nio-8080-exec-2] | INFO  | o.s.web.servlet.DispatcherServlet |  | Completed initialization in 0 ms 
+8411 | [http-nio-8080-exec-2] | WARN  | o.s.w.s.m.s.DefaultHandlerExceptionResolver |  | Resolved [org.springframework.web.bind.ServletRequestBindingException: Missing request attribute 'CorrelationId' of type String] 
+49161 | [http-nio-8080-exec-1] | WARN  | o.s.w.s.m.s.DefaultHandlerExceptionResolver |  | Resolved [org.springframework.web.bind.ServletRequestBindingException: Missing request attribute 'CorrelationId' of type String] 
+612  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 48944 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+615  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1440 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1449 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1449 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1527 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1527 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 858 ms 
+1866 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1874 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.658 seconds (JVM running for 2.094) 
+654  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 28452 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+657  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1461 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1471 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1471 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1543 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1543 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 831 ms 
+1897 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1906 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.677 seconds (JVM running for 2.107) 
+503  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 50964 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+507  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1267 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1275 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1276 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1349 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1349 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 798 ms 
+1669 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1678 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.51 seconds (JVM running for 1.819) 
+5190 | [http-nio-8080-exec-1] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring DispatcherServlet 'dispatcherServlet' 
+5190 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Initializing Servlet 'dispatcherServlet' 
+5191 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Completed initialization in 1 ms 
+5218 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 00f16378-753d-49ae-a150-fc66e5c9c480 | request : check perfect number : 6 
+5219 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 00f16378-753d-49ae-a150-fc66e5c9c480 | isPerfectNumber() : output :  
+256197 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | 9ec4811f-1c1a-4331-babb-0ed3b8d07790 | request : check perfect number : 6 
+256197 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | 9ec4811f-1c1a-4331-babb-0ed3b8d07790 | isPerfectNumber() : output :  
+546  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 45048 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+548  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1312 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1321 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1321 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1390 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1390 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 796 ms 
+1677 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1684 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.489 seconds (JVM running for 1.824) 
+3608 | [http-nio-8080-exec-1] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring DispatcherServlet 'dispatcherServlet' 
+3608 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Initializing Servlet 'dispatcherServlet' 
+3609 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Completed initialization in 0 ms 
+3640 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 200f69cd-d11e-4709-9e47-5560dd26ae1c | request : check perfect number : 6 
+3642 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 200f69cd-d11e-4709-9e47-5560dd26ae1c | isPerfectNumber() : input : 6output : true 
+512  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Starting PerfectNumbersApplicationTests using Java 19 on DESKTOP-TT9B3MT with PID 39592 (started by LENOVO in E:\Java Projects\assignment\assignment) 
+513  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | No active profile set, falling back to 1 default profile: "default" 
+1599 | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Started PerfectNumbersApplicationTests in 1.322 seconds (JVM running for 2.007) 
+495  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 52060 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+498  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1240 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1250 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1250 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1324 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1324 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 780 ms 
+1629 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1635 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.474 seconds (JVM running for 1.769) 
+5030 | [http-nio-8080-exec-1] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring DispatcherServlet 'dispatcherServlet' 
+5030 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Initializing Servlet 'dispatcherServlet' 
+5030 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Completed initialization in 0 ms 
+5061 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 921eb260-ca18-440d-9400-aba8d613541e | request processing : get perfect number series in range 
+5064 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 921eb260-ca18-440d-9400-aba8d613541e | isPerfectNumber() : output : [6, 28, 496] 
+435694 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | 3a6e8d4f-cb06-4812-91f1-a582d5f4514c | request processing : check perfect number : 6 
+435696 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | 3a6e8d4f-cb06-4812-91f1-a582d5f4514c | isPerfectNumber() : input : 6 output : true 
+480665 | [http-nio-8080-exec-4] | INFO  | c.w.a.controller.NumberController | c474d99d-e328-472b-87e5-70a53145781a | request processing : get perfect number series in range 
+480667 | [http-nio-8080-exec-4] | INFO  | c.w.a.controller.NumberController | c474d99d-e328-472b-87e5-70a53145781a | isPerfectNumber() : output : [0, 6, 28, 496] 
+513  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Starting PerfectNumbersApplicationTests using Java 19 on DESKTOP-TT9B3MT with PID 42092 (started by LENOVO in E:\Java Projects\assignment\assignment) 
+514  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | No active profile set, falling back to 1 default profile: "default" 
+1640 | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Started PerfectNumbersApplicationTests in 1.335 seconds (JVM running for 2.125) 
+506  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 39168 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+508  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1224 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1232 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1232 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1299 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1299 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 745 ms 
+1564 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1570 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.404 seconds (JVM running for 1.707) 
+9405 | [http-nio-8080-exec-1] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring DispatcherServlet 'dispatcherServlet' 
+9406 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Initializing Servlet 'dispatcherServlet' 
+9406 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Completed initialization in 0 ms 
+9430 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 5c831655-8525-4375-b276-ec07812bfee8 | request processing : get perfect number series in range 
+9432 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 5c831655-8525-4375-b276-ec07812bfee8 | isPerfectNumber() : output : [0, 6, 28, 496] 
+83580 | [http-nio-8080-exec-4] | INFO  | c.w.a.controller.NumberController | 0c481a8c-7a01-408d-8b4f-f159c21e9caf | request processing : check perfect number : 6 
+83583 | [http-nio-8080-exec-4] | INFO  | c.w.a.controller.NumberController | 0c481a8c-7a01-408d-8b4f-f159c21e9caf | isPerfectNumber() : input : 6 output : true 
+520  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Starting PerfectNumbersApplicationTests using Java 19 on DESKTOP-TT9B3MT with PID 49984 (started by LENOVO in E:\Java Projects\assignment\assignment) 
+521  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | No active profile set, falling back to 1 default profile: "default" 
+1580 | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Started PerfectNumbersApplicationTests in 1.289 seconds (JVM running for 2.019) 
+549  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Starting PerfectNumbersApplicationTests using Java 19 on DESKTOP-TT9B3MT with PID 39476 (started by LENOVO in E:\Java Projects\assignment\assignment) 
+550  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | No active profile set, falling back to 1 default profile: "default" 
+1599 | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Started PerfectNumbersApplicationTests in 1.273 seconds (JVM running for 2.048) 
+582  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Starting PerfectNumbersApplicationTests using Java 19 on DESKTOP-TT9B3MT with PID 51072 (started by LENOVO in E:\Java Projects\assignment\assignment) 
+583  | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | No active profile set, falling back to 1 default profile: "default" 
+1646 | [main] | INFO  | c.w.a.PerfectNumbersApplicationTests |  | Started PerfectNumbersApplicationTests in 1.301 seconds (JVM running for 2.064) 
+828292 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | c98ee508-2e3e-4779-86b9-89b9a3038841 | request processing : check perfect number : 5 
+828292 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | c98ee508-2e3e-4779-86b9-89b9a3038841 | isPerfectNumber() : output : false 
+882682 | [http-nio-8080-exec-9] | WARN  | o.s.w.s.m.s.DefaultHandlerExceptionResolver | 27821426-7358-4fbd-97b5-b99493a8e254 | Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "dfd"] 
+552  | [main] | INFO  | c.w.PerfectNumbersApplication |  | Starting PerfectNumbersApplication using Java 19 on DESKTOP-TT9B3MT with PID 53580 (E:\Java Projects\assignment\assignment\target\classes started by LENOVO in E:\Java Projects\assignment\assignment) 
+555  | [main] | INFO  | c.w.PerfectNumbersApplication |  | No active profile set, falling back to 1 default profile: "default" 
+1317 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat initialized with port(s): 8080 (http) 
+1326 | [main] | INFO  | o.a.catalina.core.StandardService |  | Starting service [Tomcat] 
+1327 | [main] | INFO  | o.a.catalina.core.StandardEngine |  | Starting Servlet engine: [Apache Tomcat/9.0.68] 
+1397 | [main] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring embedded WebApplicationContext 
+1398 | [main] | INFO  | o.s.b.w.s.c.ServletWebServerApplicationContext |  | Root WebApplicationContext: initialization completed in 801 ms 
+1674 | [main] | INFO  | o.s.b.w.e.tomcat.TomcatWebServer |  | Tomcat started on port(s): 8080 (http) with context path '' 
+1682 | [main] | INFO  | c.w.PerfectNumbersApplication |  | Started PerfectNumbersApplication in 1.512 seconds (JVM running for 1.83) 
+76879 | [http-nio-8080-exec-1] | INFO  | o.a.c.c.C.[Tomcat].[localhost].[/] |  | Initializing Spring DispatcherServlet 'dispatcherServlet' 
+76879 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Initializing Servlet 'dispatcherServlet' 
+76880 | [http-nio-8080-exec-1] | INFO  | o.s.web.servlet.DispatcherServlet |  | Completed initialization in 1 ms 
+76906 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 6cfe9e29-c920-4dab-b129-10aaa9a078f2 | request processing : check perfect number : 6 
+76908 | [http-nio-8080-exec-1] | INFO  | c.w.a.controller.NumberController | 6cfe9e29-c920-4dab-b129-10aaa9a078f2 | isPerfectNumber() : input : 6 output : true 
+142319 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | 7e9e13ab-3565-4436-a9af-2a2e01071e6e | request processing : get perfect number series in range 
+142325 | [http-nio-8080-exec-3] | INFO  | c.w.a.controller.NumberController | 7e9e13ab-3565-4436-a9af-2a2e01071e6e | isPerfectNumber() : output : [6, 28, 496] 
